@@ -5,9 +5,9 @@ const ipfsAPI = require('ipfs-api');
 const ipfs = ipfsAPI({ host: 'localhost', port: '5001', protocol: 'http' });
 
 async function uploadImageToIPFS(imagePath) {
-  try {
+  try {    
     // Read the image file
-    const imageBuffer = fs.readFileSync(imagePath);
+    const imageBuffer = fs.readFileSync(imagePath); 
 
     // Upload the image to IPFS
     const result = await ipfs.files.add({
